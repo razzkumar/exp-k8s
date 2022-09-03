@@ -14,8 +14,8 @@ The node name is set as an environment variable and the value is set using the [
 ## Run on a Kubernetes Cluster
 Clone this repository and change into the daemonset directory
 ```bash
-git clone https://github.com/razzkumar/example-k8s/ && \
-cd example-k8s-workloads/daemonset
+git clone https://github.com/razzkumar/exp-k8s/ && \
+cd exp-k8s/daemonset
 ```
 Apply the DaemonSet manifest
 

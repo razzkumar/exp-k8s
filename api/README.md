@@ -4,7 +4,7 @@ A lightweight example API written in go that was designed to help people practic
 ## Installation & Run
 ```bash
 # Download this project
-go get https://github.com/razzkumar/example-k8s/
+go get https://github.com/razzkumar/exp-k8s/
 ```
 
 ```bash

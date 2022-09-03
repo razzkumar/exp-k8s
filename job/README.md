@@ -24,8 +24,8 @@ a577e9c9-0ad1-4934-b5f1-17b68938fff8@mailinator.com
 ## Run on a Kubernetes Cluster
 Clone this repository and change into the daemonset directory
 ```bash
-git clone https://github.com/razzkumar/example-k8s/ && \
-cd example-k8s-workloads/job
+git clone https://github.com/razzkumar/exp-k8s/ && \
+cd exp-k8s/job
 ```
 Apply the Job manifest
 

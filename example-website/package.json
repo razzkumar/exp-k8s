@@ -9,7 +9,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/razzkumar/example-k8s.git"
+        "url": "git+https://github.com/razzkumar/exp-k8s.git"
     },
     "keywords": [
         "nodejs",
@@ -18,9 +18,9 @@
     "author": "Kim Schlesinger",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/razzkumar/example-k8s/issues"
+        "url": "https://github.com/razzkumar/exp-k8s/issues"
     },
-    "homepage": "https://github.com/razzkumar/example-k8s#readme",
+    "homepage": "https://github.com/razzkumar/exp-k8s#readme",
     "dependencies": {
         "express": "^4.17.1"
     }
