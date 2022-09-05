@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: website
-        image: razzkumar/ex-api:latest
+        # image: razzkumar/ex-api:latest
+        image: registry.digitalocean.com/exp-app/app:v0.0.1
         ports:
         - containerPort: 3000

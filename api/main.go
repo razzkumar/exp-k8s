@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 )
 
@@ -101,6 +102,12 @@ func main() {
 		port = defaultPort
 	}
 
+	originAllowd := os.Getenv("ORIGIN_ALLOWED")
+
+	if originAllowd == "" {
+		originAllowd = "*"
+	}
+
 	mux := mux.NewRouter()
 	subrouter := mux.PathPrefix("/api/v1").Subrouter()
 
@@ -119,7 +126,11 @@ func main() {
 	notFoundHandler := http.HandlerFunc(notFound)
 	subrouter.Handle("/", notFoundHandler)
 
+	headersOk := handlers.AllowedHeaders([]string{"X-Requested-With"})
+	originsOk := handlers.AllowedOrigins([]string{originAllowd})
+	methodsOk := handlers.AllowedMethods([]string{"GET", "HEAD", "POST", "PUT", "OPTIONS"})
+
 	log.Printf("Listening on port %s", port)
-	log.Fatal(http.ListenAndServe(":"+port, mux))
+	log.Fatal(http.ListenAndServe(":"+port, handlers.CORS(originsOk, headersOk, methodsOk)(mux)))
 
 }
