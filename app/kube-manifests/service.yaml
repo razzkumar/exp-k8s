@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: example-service-lb
+  name: app-service-lb
 spec:
   selector:
-    app: website
+    app: app
   ports:
     - port: 80
-      targetPort: 3000
-  type: LoadBalancer
+  # type: LoadBalancer
+  type: NodePort

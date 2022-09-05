@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: example-api
+  name: api
   labels:
     app: api
 spec:
@@ -20,3 +20,5 @@ spec:
         image: registry.digitalocean.com/exp-app/api:v0.0.1
         ports:
         - containerPort: 4000
+      imagePullSecrets:
+        - name: registry-exp-app
